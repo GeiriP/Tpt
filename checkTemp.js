@@ -6,6 +6,3 @@ function checkTemp (T){
 console.log(checkTemp(30));
 console.log(checkTemp(100));
 console.log(checkTemp(1));
-//katsetus
- let T = prompt('sisesta temp');
-checkTemp();
