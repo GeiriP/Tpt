@@ -4,4 +4,4 @@ function count (letter){
   return result.length;
 
 }
-count (letter = 'F');
+count (letter = 'i');
