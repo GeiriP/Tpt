@@ -33,15 +33,16 @@ var tellimus = {
     ]
 }
 
-function orderSummary(objarray) {
-    let koguhind = 0;
-    objarray.rows.forEach(logger)
-    function logger(it){
-        console.log(it.name);
-        console.log(it.amount);
-        let hind = it.price * (1 + it.vat);
-        console.log(hind);
-        koguhind += hind * it.amount;
+function orderSummary(rows) {
+    let total = 0;
+    for (i=0; i<rows.length; i++) {
+        let row = rows[i]
+        let productPrice = row.price * row.amount;
+        total += productPrice
+        console.log('Name: '+row.name, 'Price: '+row.price, 'Amount: '+row.amount, 'Total: '+productPrice);
+     console.log('Total '+total);
+    console.log('With TAX '+total * 1.2);
     }
-    console.log(koguhind);
-}
+  }
+
+  orderSummary(tellimus.rows);
