@@ -39,10 +39,10 @@ function orderSummary(rows) {
         let row = rows[i]
         let productPrice = row.price * row.amount;
         total += productPrice
-        console.log('Name: '+row.name, 'Price: '+row.price, 'Amount: '+row.amount, 'Total: '+productPrice);
-     console.log('Total '+total);
-    console.log('With TAX '+total * 1.2);
+        console.log('Name: '+row.name, 'Price: ' + Math.round(row.price), 'Amount: '+row.amount, 'Total: ' + Math.round(productPrice));
     }
+         console.log('Total '+Math.round(total));
+    console.log('With TAX '+ Math.round(total * 1.2));
   }
 
   orderSummary(tellimus.rows);
